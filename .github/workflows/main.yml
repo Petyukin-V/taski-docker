@@ -30,3 +30,12 @@ jobs:
         python -m flake8 backend/
         cd backend/
         python manage.py test
+
+  build_and_push_to_docker_hub:
+    ...
+    steps:
+      ...
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      ...
